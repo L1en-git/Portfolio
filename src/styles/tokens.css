@@ -1,0 +1,16 @@
+:root {
+  --ink: #0b1a2b;        /* blueprint background navy */
+  --ink-deep: #071220;   /* darker navy for depth/shadow */
+  --line: #3d6a95;       /* blueprint rule blue */
+  --line-soft: rgba(150, 190, 224, 0.22);
+  --paper: #ece7da;      /* warm drafting paper */
+  --paper-dim: #b9c4cf;  /* muted paper / secondary text */
+  --signal: #ff9d5c;     /* amber accent — CTAs, highlights */
+  --teal: #5fd6c4;       /* secondary accent — status, ticks */
+
+  --font-display: "Libre Franklin", sans-serif;
+  --font-body: "IBM Plex Sans", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+
+  color-scheme: dark;
+}

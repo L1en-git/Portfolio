@@ -1,0 +1,6 @@
+/* Global tokens, resets, and shared primitives (buttons, grid-field, .sheet).
+   Section- and component-specific styles are imported directly by their
+   own component file, so each piece of CSS lives next to the JSX that uses it. */
+@import "./styles/tokens.css";
+@import "./styles/base.css";
+@import "./styles/buttons.css";

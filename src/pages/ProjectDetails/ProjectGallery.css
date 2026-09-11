@@ -1,0 +1,117 @@
+.gallery {
+  position: relative;
+  z-index: 1;
+  outline: none;
+}
+
+.gallery__frame {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  background: linear-gradient(160deg, rgba(20, 38, 58, 0.96), rgba(11, 26, 43, 0.99));
+}
+
+.gallery__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  animation: gallery-fade 280ms ease;
+}
+
+@keyframes gallery-fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.gallery__arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 38px;
+  height: 38px;
+  border: 1px solid var(--line);
+  background: rgba(7, 18, 32, 0.65);
+  color: var(--paper);
+  font-family: var(--font-mono);
+  font-size: 20px;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: border-color 0.2s ease, color 0.2s ease, background 0.2s ease, transform 0.2s ease;
+}
+
+.gallery__arrow:hover,
+.gallery__arrow:focus-visible {
+  border-color: var(--signal);
+  color: var(--signal);
+  background: rgba(7, 18, 32, 0.85);
+  transform: translateY(-50%) scale(1.06);
+}
+
+.gallery__arrow--prev {
+  left: 12px;
+}
+
+.gallery__arrow--next {
+  right: 12px;
+}
+
+.gallery__count {
+  position: absolute;
+  right: 12px;
+  bottom: 10px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  color: var(--paper-dim);
+  background: rgba(7, 18, 32, 0.6);
+  padding: 3px 8px;
+  border: 1px solid var(--line-soft);
+}
+
+.gallery__dots {
+  display: flex;
+  justify-content: center;
+  gap: 9px;
+  margin-top: 16px;
+}
+
+.gallery__dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  border: 1px solid var(--paper-dim);
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+  transition: background 0.25s ease, border-color 0.25s ease, transform 0.25s ease;
+}
+
+.gallery__dot.is-active {
+  background: var(--signal);
+  border-color: var(--signal);
+  transform: scale(1.3);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .gallery__image {
+    animation: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .gallery__arrow {
+    width: 32px;
+    height: 32px;
+    font-size: 16px;
+  }
+}

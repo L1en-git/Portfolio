@@ -1,0 +1,42 @@
+.sheet--contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 26px;
+}
+
+.contact__stamp {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  color: var(--teal);
+  position: relative;
+  z-index: 1;
+}
+
+.contact__headline {
+  position: relative;
+  z-index: 1;
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  line-height: 1.15;
+}
+
+.contact__row {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.contact__footer {
+  position: relative;
+  z-index: 1;
+  margin-top: 40px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--paper-dim);
+}
